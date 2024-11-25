@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Intrusion Detection System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="main-page">
+  <div class="container">
+    <h1>Intrusion Detection System (IDS)</h1>
+
+    <!-- Add Signature Section -->
+    <div class="section">
+      <h2>Step 1: Add Bad Behavior Patterns</h2>
+      <p>Enter a "malicious" pattern (e.g., malware123) to monitor:</p>
+      <input type="text" id="signatureInput" placeholder="Enter attack signature">
+      <button onclick="addSignature()">Add Signature</button>
+      <p>Added Signatures: <span id="signatureList"></span></p>
+    </div>
+
+    <!-- Simulate Traffic Section -->
+    <div class="section">
+      <h2>Step 2: Simulate Network Traffic</h2>
+      <p>Click the button below to simulate traffic. Some packets may be bad!</p>
+      <button onclick="simulateTraffic()">Simulate Traffic</button>
+    </div>
+
+    <!-- Alerts Section -->
+    <div class="section">
+      <h2>Detected Alerts</h2>
+      <ul id="alertsList"></ul>
+    </div>
+
+    <!-- Traffic Chart Section -->
+    <div class="section">
+      <h2>Network Traffic Chart</h2>
+      <canvas id="trafficChart"></canvas>
+      <!-- Download and Reset Buttons -->
+      <button onclick="downloadChart()">Download Chart</button>
+      <button onclick="resetSystem()">Reset</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by Jaysinh, Shaurya, Sannidhya & Unnati</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
